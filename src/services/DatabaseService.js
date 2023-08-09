@@ -1,14 +1,14 @@
 import firebase from "../firebase";
 
-const db = firebase.ref("/tutorials");
+const db = firebase.ref("/jobs");
 
 class DatabaseService {
   getAll() {
     return db;
   }
 
-  create(tutorial) {
-    return db.push(tutorial);
+  create(job) {
+    return db.push(job);
   }
 
   update(key, value) {
