@@ -18,7 +18,7 @@ const store = createStore({
     },
     getters: {
         getJob(jobId) {
-            return this.$store.jobs.filter(todo => todo.id==jobId)
+            return this.$store.state.jobs.filter(todo => todo.id==jobId)
         }
     }
 });
