@@ -12,7 +12,7 @@
       </div>
     </nav>
 
-    <div class="container mt-3">
+    <div class="container-fluid">
       <h2>Job Board Aggregator with an API</h2>
       <router-view />
     </div>

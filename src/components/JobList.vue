@@ -14,9 +14,9 @@
           </li>
         </ul>
 
-        <button class="m-3 btn btn-sm btn-danger" @click="removeAllJobs">
+        <!-- <button class="m-3 btn btn-sm btn-danger" @click="removeAllJobs">
           Remove All
-        </button>
+        </button> -->
       </div>
       <div class="col-md-6">
         <div v-if="currentJob">
@@ -35,7 +35,7 @@
 
   <script>
   import JobDataService from "../services/DatabaseService";
-  import JobDetails from "./Job";
+  import JobDetails from "./JobDetails";
 
   export default {
     name: "jobs-list",
@@ -58,7 +58,7 @@
             key: key,
             title: data.title,
             description: data.description,
-            published: data.published,
+            date: data.date,
           });
         });
 
