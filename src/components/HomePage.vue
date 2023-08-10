@@ -6,9 +6,17 @@
         <li class="nav-item">
           <router-link to="/jobs" class="nav-link">Jobs</router-link>
         </li>
-        <li class="nav-item">
-          <router-link to="/add" class="nav-link">Add</router-link>
+
+        <li class="nav-item" v-if="!user">
+          <router-link to="/login" class="nav-link">Login</router-link>
         </li>
+        <li class="nav-item" v-if="!user">
+          <router-link to="/register" class="nav-link">Register</router-link>
+        </li>
+        <li class="nav-item" v-if="!!user">
+          <router-link to="/dashboard" class="nav-link">Dashboard</router-link>
+        </li>
+
       </div>
     </nav>
 
@@ -21,7 +29,13 @@
 
 <script>
 export default {
-  name: "HomePage"
+  name: "HomePage",
+  computed:{
+    user() {
+      return this.$store.getters.user.data;
+    }
+  }
+
 };
 </script>
 

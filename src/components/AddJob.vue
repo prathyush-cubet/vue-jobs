@@ -1,4 +1,8 @@
 <template>
+  <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card">
     <div class="submit-form">
       <div v-if="!submitted">
         <div class="form-group">
@@ -42,6 +46,10 @@
         <button class="btn btn-success" @click="newJob">Add</button>
       </div>
     </div>
+  </div>
+</div>
+</div>
+</div>
   </template>
 
   <script>
