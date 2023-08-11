@@ -1,8 +1,8 @@
 <template>
-  <div id="app">
+  <header>
     <nav class="navbar navbar-expand navbar-dark bg-dark">
       <router-link to="/" class="navbar-brand">Home</router-link>
-      <div class="navbar-nav mr-auto">
+      <ul class="navbar-nav mr-auto">
         <li class="nav-item">
           <router-link to="/jobs" class="nav-link">Jobs</router-link>
         </li>
@@ -17,14 +17,14 @@
           <router-link to="/dashboard" class="nav-link">Dashboard</router-link>
         </li>
 
-      </div>
+      </ul>
     </nav>
 
     <div class="container-fluid">
       <h2>Job Board Aggregator with an API</h2>
       <router-view />
     </div>
-  </div>
+  </header>
 </template>
 
 <script>
